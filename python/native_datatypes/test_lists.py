@@ -3,7 +3,9 @@ import math
 import os
 
 
-logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s', filename="debug.log", filemode='w',
+logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',
+                    filename="debug.log",
+                    filemode='w',
                     level=logging.INFO)
 
 
