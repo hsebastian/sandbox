@@ -1,0 +1,4 @@
+numpy==1.6.1
+py==1.4.7
+pytest==2.2.3
+wsgiref==0.1.2
