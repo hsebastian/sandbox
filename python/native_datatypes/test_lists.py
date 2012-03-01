@@ -31,6 +31,11 @@ class TestLists(object):
         for side in cube_sides:
             assert int(math.pow(side, 3)) == cube_volumes.pop(0)
 
+    def test_filtering_mapping_list(self):
+        numbers = range(100)
+        multiples_of_thirties = [num * 10 for num in numbers if num % 3 == 0]
+        assert range(0, 1000, 30) == multiples_of_thirties
+
     def test_adding_items(self):
         raise AssertionError, "TODO"
 
