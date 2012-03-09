@@ -1,6 +1,14 @@
 import types
 
 
+class Program(object):
+    SYSTEM_PORT = "7999"
+    def __init__(self, port):
+        self.port = port
+    def start(self):
+        print "Program is running on port: %s" % self.port
+
+
 class TestAssignment(object):
     def test_assigning_multiple_values_at_once(self):
         comics = ('dono', 'kasino', 'indro')
@@ -18,4 +26,11 @@ class TestAssignment(object):
         a, b, c, d, e, f = range(length)
         assert type(a) == types.IntType
         assert a == my_list[0]
+
+    def test_callable(self):
+        assert callable(Program) == True
+        assert callable(Program.start) == True
+        assert callable("hello world") == False
+        assert callable(types) == False
+
 
